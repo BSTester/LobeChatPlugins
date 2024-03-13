@@ -1,18 +1,18 @@
 {
   "api": {
     "type": "openapi",
-    "url": "https://openai-collections.chat-plugin.lobehub.com/web-search/openapi.json",
+    "url": "https://raw.githubusercontent.com/BSTester/LobeChatPlugins/main/news_to_image_openapi.json",
     "is_user_authenticated": false
   },
   "auth": {
     "type": "none"
   },
-  "contact_email": "support@plugsugar.com",
+  "contact_email": "admin@openstark.com",
   "description_for_human": "Search for information from the internet",
   "description_for_model": "Search for information from the internet",
-  "legal_info_url": "https://websearch.plugsugar.com/contact",
+  "legal_info_url": "https://www.infinitydecimal.com",
   "logo_url": "https://openai-collections.chat-plugin.lobehub.com/web-search/logo.webp",
-  "name_for_human": "Web Search",
-  "name_for_model": "web_search",
+  "name_for_human": "Mark news to image",
+  "name_for_model": "mark_news_to_image",
   "schema_version": "v1"
 }
