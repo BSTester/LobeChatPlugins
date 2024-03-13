@@ -15,36 +15,29 @@
       "post": {
         "description": "Create an image with news title and content.",
         "operationId": "MakeNewsImage",
-        "parameters": [
-          {
-            "name": "title",
-            "in": "body",
-            "description": "The news title.",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "content",
-            "in": "body",
-            "description": "The news content.",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "size",
-            "in": "body",
-            "description": "The image size. Default is medium.",
-            "required": false,
-            "schema": {
-              "type": "string",
-              "enum": ["small", "medium", "large"]
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "title": {
+                    "type": "string"
+                  },
+                  "content": {
+                    "type": "string"
+                  },
+                  "size": {
+                    "type": "string",
+                    "enum": ["small", "medium", "large"]
+                  }
+                },
+                "required": ["title", "content"]
+              }
             }
           }
-        ],
+        },
         "deprecated": false
       }
     }
