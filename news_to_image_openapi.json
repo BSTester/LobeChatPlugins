@@ -1,0 +1,67 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "Mark news to image API",
+    "description": "API for creating an image with news title and content.",
+    "version": "v1.0.0"
+  },
+  "servers": [
+    {
+      "url": "https://www.infinitydecimal.com"
+    }
+  ],
+  "paths": {
+    "/api/business/v1/open/chat/svgmaker": {
+      "post": {
+        "description": "Create an image with news title and content.",
+        "operationId": "MakeNewsImage",
+        "parameters": [
+          {
+            "name": "title",
+            "in": "body",
+            "description": "The news title.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "content",
+            "in": "body",
+            "description": "The news content.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "size",
+            "in": "body",
+            "description": "The image size. Default is medium.",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "enum": ["small", "medium", "large"]
+            }
+          }
+        ],
+        "deprecated": false
+      }
+    }
+  },
+  "components": {
+    "schemas": {},
+    "securitySchemes": {
+      "ApiKeyAuth": {
+        "type": "apiKey",
+        "in": "header",
+        "name": "x-api-key"
+      }
+    }
+  },
+  "security": [
+    {
+      "ApiKeyAuth": []
+    }
+  ]
+}
