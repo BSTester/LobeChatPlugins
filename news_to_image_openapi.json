@@ -1,7 +1,7 @@
 {
   "openapi": "3.1.0",
   "info": {
-    "title": "Mark news to image API",
+    "title": "Convert news to image API",
     "description": "API for creating an image with news title and content.",
     "version": "v1.0.0"
   },
