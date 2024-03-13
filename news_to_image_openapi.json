@@ -43,6 +43,15 @@
               "type": "string",
               "enum": ["small", "medium", "large"]
             }
+          },
+          {
+            "name": "x-api-key",
+            "in": "header",
+            "description": "api Key",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
           }
         ],
         "deprecated": false
