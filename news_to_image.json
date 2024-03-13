@@ -8,8 +8,8 @@
     "type": "none"
   },
   "contact_email": "admin@openstark.com",
-  "description_for_human": "Search for information from the internet",
-  "description_for_model": "Search for information from the internet",
+  "description_for_human": "API for creating an image with news title and content.",
+  "description_for_model": "API for creating an image with news title and content.",
   "legal_info_url": "https://www.infinitydecimal.com",
   "logo_url": "https://openai-collections.chat-plugin.lobehub.com/web-search/logo.webp",
   "name_for_human": "Mark news to image",
