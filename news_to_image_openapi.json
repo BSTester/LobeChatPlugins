@@ -45,7 +45,7 @@
               "application/json": {
                 "schema": {
                   "type": "object",
-                  "required": ["success"],
+                  "required": ["success", "data", "message"],
                   "properties": {
                     "data": {
                       "type": "string",
