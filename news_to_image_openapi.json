@@ -38,7 +38,34 @@
             }
           }
         },
-        "deprecated": false
+        "responses": {
+          "200": {
+            "description": "Successful create image",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "required": ["success"],
+                  "properties": {
+                    "data": {
+                      "type": "string",
+                      "description": "The image url"
+                    },
+                    "code": {
+                      "type": "string",
+                    },
+                    "success": {
+                      "type": "boolean",
+                    },
+                    "message": {
+                      "type": "string",
+                    },
+                  }
+                }
+              }
+            }
+          }
+        }
       }
     }
   },
