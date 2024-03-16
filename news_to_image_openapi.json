@@ -63,12 +63,12 @@
                                         "type": "string",
                                         "description": "The background color, default is #000000.",
                                         "default": "#000000"
-                                    },
-                                    "required": [
-                                        "title",
-                                        "content"
-                                    ]
-                                }
+                                    } 
+                                },
+                                "required": [
+                                    "title",
+                                    "content"
+                                ]
                             }
                         }
                     }
