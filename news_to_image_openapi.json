@@ -1,112 +1,126 @@
 {
-  "openapi": "3.1.0",
-  "info": {
-    "title": "Convert news to image API",
-    "description": "API for creating an image with news title and content.",
-    "version": "v1.0.0"
-  },
-  "servers": [
-    {
-      "url": "https://www.infinitydecimal.com"
-    }
-  ],
-  "paths": {
-    "/api/business/v1/open/chat/svgmaker": {
-      "post": {
-        "description": "Create an image with news title and content.",
-        "operationId": "MakeNewsImage",
-        "requestBody": {
-          "required": true,
-          "content": {
-            "application/json": {
-              "schema": {
-                "type": "object",
-                "properties": {
-                  "title": {
-                    "type": "string"
-                  },
-                  "content": {
-                    "type": "string"
-                  },
-                  "size": {
-                    "type": "string",
-                    "enum": ["small", "medium", "large"],
-                    "default": "medium"
-                  },
-                  "titleSize": {
-                    "type": "string",
-                    "description": "The title font size, default is 36px.",
-                    "default": "36px"
-                  },
-                  "contentSize": {
-                    "type": "string",
-                    "description": "The content font size, default is 28px.",
-                    "default": "28px"
-                  },
-                  "titleColor": {
-                    "type": "string",
-                    "description": "The title font color, default is #FFFFFF.",
-                    "default": "#FFFFFF"
-                  },
-                  "contentColor": {
-                    "type": "string",
-                    "description": "The content font color, default is #FFFFFF.",
-                    "default": "#FFFFFF"
-                  },
-                  "bgColor": {
-                    "type": "string",
-                    "description": "The background color, default is #000000.",
-                    "default": "#000000"
-                },
-                "required": ["title", "content"]
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "Successful create image",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "object",
-                  "required": ["success", "data", "message"],
-                  "properties": {
-                    "data": {
-                      "type": "string",
-                      "description": "The image url"
-                    },
-                    "code": {
-                      "type": "string",
-                    },
-                    "success": {
-                      "type": "boolean",
-                    },
-                    "message": {
-                      "type": "string",
-                    },
-                  }
-                }
-              }
-            }
-          }
+    "openapi": "3.1.0",
+    "info": {
+        "title": "Convert news to image API",
+        "description": "API for creating an image with news title and content.",
+        "version": "v1.0.0"
+    },
+    "servers": [
+        {
+            "url": "https://www.infinitydecimal.com"
         }
-      }
-    }
-  },
-  "components": {
-    "schemas": {},
-    "securitySchemes": {
-      "ApiKeyAuth": {
-        "type": "apiKey",
-        "in": "header",
-        "name": "x-api-key"
-      }
-    }
-  },
-  "security": [
-    {
-      "ApiKeyAuth": []
-    }
-  ]
+    ],
+    "paths": {
+        "/api/business/v1/open/chat/svgmaker": {
+            "post": {
+                "description": "Create an image with news title and content.",
+                "operationId": "MakeNewsImage",
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "type": "object",
+                                "properties": {
+                                    "title": {
+                                        "type": "string",
+                                        "description": "The news title."
+                                    },
+                                    "content": {
+                                        "type": "string",
+                                        "description": "The news content"
+                                    },
+                                    "size": {
+                                        "type": "string",
+                                        "enum": [
+                                            "small",
+                                            "medium",
+                                            "large"
+                                        ],
+                                        "default": "medium"
+                                    },
+                                    "titleSize": {
+                                        "type": "string",
+                                        "description": "The title font size, default is 36px.",
+                                        "default": "36px"
+                                    },
+                                    "contentSize": {
+                                        "type": "string",
+                                        "description": "The content font size, default is 28px.",
+                                        "default": "28px"
+                                    },
+                                    "titleColor": {
+                                        "type": "string",
+                                        "description": "The title font color, default is #FFFFFF.",
+                                        "default": "#FFFFFF"
+                                    },
+                                    "contentColor": {
+                                        "type": "string",
+                                        "description": "The content font color, default is #FFFFFF.",
+                                        "default": "#FFFFFF"
+                                    },
+                                    "bgColor": {
+                                        "type": "string",
+                                        "description": "The background color, default is #000000.",
+                                        "default": "#000000"
+                                    },
+                                    "required": [
+                                        "title",
+                                        "content"
+                                    ]
+                                }
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Successful create image",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "required": [
+                                        "success",
+                                        "data",
+                                        "message"
+                                    ],
+                                    "properties": {
+                                        "data": {
+                                            "type": "string",
+                                            "description": "The image url"
+                                        },
+                                        "code": {
+                                            "type": "string"
+                                        },
+                                        "success": {
+                                            "type": "boolean"
+                                        },
+                                        "message": {
+                                            "type": "string"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "components": {
+        "schemas": {},
+        "securitySchemes": {
+            "ApiKeyAuth": {
+                "type": "apiKey",
+                "in": "header",
+                "name": "x-api-key"
+            }
+        }
+    },
+    "security": [
+        {
+            "ApiKeyAuth": []
+        }
+    ]
 }
