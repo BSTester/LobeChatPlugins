@@ -1,0 +1,40 @@
+{
+    "openapi": "3.1.0",
+    "info": {
+        "title": "Get content by url API",
+        "description": "API for get content by url.",
+        "version": "v1.0.0"
+    },
+    "servers": [
+        {
+            "url": "https://spider.smartaigc.cn"
+        }
+    ],
+    "paths": {
+        "/api/v1/article/content": {
+            "post": {
+                "description": "Get content by url.",
+                "operationId": "GetConentByUrl",
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "type": "object",
+                                "properties": {
+                                    "url": {
+                                        "type": "string",
+                                        "description": "The news url."
+                                    }
+                                },
+                                "required": [
+                                    "url"
+                                ]
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
