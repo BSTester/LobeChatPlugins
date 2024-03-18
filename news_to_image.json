@@ -12,7 +12,7 @@
   "description_for_model": "API for creating an image with news title and content.",
   "legal_info_url": "https://www.infinitydecimal.com",
   "logo_url": "https://raw.githubusercontent.com/BSTester/LobeChatPlugins/main/news_to_image_logo.png",
-  "name_for_human": "Convert news to image",
+  "name_for_human": "文本转图片",
   "name_for_model": "convert_news_to_image",
   "schema_version": "v1"
 }
