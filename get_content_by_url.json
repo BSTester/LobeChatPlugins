@@ -1,0 +1,18 @@
+{
+  "api": {
+    "type": "openapi",
+    "url": "https://raw.githubusercontent.com/BSTester/LobeChatPlugins/main/get_content_by_url_openapi.json",
+    "is_user_authenticated": false
+  },
+  "auth": {
+    "type": "none"
+  },
+  "contact_email": "admin@openstark.com",
+  "description_for_human": "API for get content by url.",
+  "description_for_model": "API for get content by url.",
+  "legal_info_url": "https://www.infinitydecimal.com",
+  "logo_url": "https://raw.githubusercontent.com/BSTester/LobeChatPlugins/main/news_to_image_logo.png",
+  "name_for_human": "获取网页文本",
+  "name_for_model": "get_content_by_url",
+  "schema_version": "v1"
+}
