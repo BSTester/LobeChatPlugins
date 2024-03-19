@@ -3,6 +3,8 @@
     {
       "description": "Create an image with news title and content.",
       "name": "MakeNewsImage",
+      "method": "post",
+      "requestType": "json",
        "url": "https://www.infinitydecimal.com/api/business/v1/open/chat/svgmaker",
       "parameters": {
         "type": "object",
