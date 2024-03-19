@@ -1,86 +1,18 @@
 {
-  "api": [
-    {
-      "description": "Create an image with news title and content.",
-      "name": "MakeNewsImage",
-      "method": "post",
-      "requestType": "json",
-       "url": "https://www.infinitydecimal.com/api/business/v1/open/chat/svgmaker",
-      "parameters": {
-        "type": "object",
-        "properties": {
-          "title": {
-            "type": "string",
-            "description": "The news title."
-          },
-          "content": {
-            "type": "string",
-            "description": "The news content"
-          },
-          "size": {
-            "type": "string",
-            "enum": [
-              "small",
-              "medium",
-              "large"
-            ],
-            "default": "medium"
-          },
-          "titleSize": {
-            "type": "string",
-            "description": "The title font size, default is 36px.",
-            "default": "36px"
-          },
-          "contentSize": {
-            "type": "string",
-            "description": "The content font size, default is 28px.",
-            "default": "28px"
-          },
-          "titleColor": {
-            "type": "string",
-            "description": "The title font color, default is #FFFFFF.",
-            "default": "#FFFFFF"
-          },
-          "contentColor": {
-            "type": "string",
-            "description": "The content font color, default is #FFFFFF.",
-            "default": "#FFFFFF"
-          },
-          "bgColor": {
-            "type": "string",
-            "description": "The background color, default is #000000.",
-            "default": "#000000"
-          }
-        },
-        "required": [
-          "title",
-          "content"
-        ]
-      }
-    }
-  ],
-  "homepage": "https://www.infinitydecimal.com",
-  "identifier": "convert_news_to_image",
-  "meta": {
-    "avatar": "https://raw.githubusercontent.com/BSTester/LobeChatPlugins/main/news_to_image_logo.png",
-    "description": "API for creating an image with news title and content.",
-    "title": "文本转图片"
+  "api": {
+    "type": "openapi",
+    "url": "https://raw.githubusercontent.com/BSTester/LobeChatPlugins/main/news_to_image_openapi.json",
+    "is_user_authenticated": false
   },
-  "systemRole": "API for creating an image with news title and content.",
-  "type": "default",
-  "version": "1",
-  "settings": {
-    "properties": {
-      "ApiKeyAuth": {
-        "description": "ApiKeyAuth API Key",
-        "format": "password",
-        "title": "x-api-key",
-        "type": "string"
-      }
-    },
-    "type": "object",
-    "required": [
-      "ApiKeyAuth"
-    ]
-  }
+  "auth": {
+    "type": "none"
+  },
+  "contact_email": "admin@openstark.com",
+  "description_for_human": "API for creating an image with news title and content.",
+  "description_for_model": "API for creating an image with news title and content.",
+  "legal_info_url": "https://www.infinitydecimal.com",
+  "logo_url": "https://raw.githubusercontent.com/BSTester/LobeChatPlugins/main/news_to_image_logo.png",
+  "name_for_human": "文本转图片",
+  "name_for_model": "convert_news_to_image",
+  "schema_version": "v1"
 }
